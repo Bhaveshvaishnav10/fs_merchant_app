@@ -1,20 +1,21 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import React from "react";
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import React from 'react';
 import {
-  DONATION_SCREEN_MAIN_AUTH,
   HOME_SCREEN_MAIN_AUTH,
-  PROFILE_SCREEN_MAIN_AUTH,
-  SHOP_SCREEN_MAIN_AUTH,
-  TRANSACTION_SCREEN_MAIN_AUTH,
-} from "../../../utility/valueConstants";
-import HomeMainAuth from "./HomeMainAuth";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import TransactionMainStack from "./TransactionStack";
-import ShopMainStack from "./ShopStack";
-import DonationMainStack from "./DonationStack";
-import ProfileMainStack from "./ProfileStack";
-import Tabbar from "./Tabbar";
-import { WhiteColor } from "../../../utility/colorConstants";
+  INVENTORY_SCREEN_MAIN_AUTH,
+  ORDERS_SCREEN_MAIN_AUTH,
+  PRODUCT_SCREEN_MAIN_AUTH,
+} from '../../../utility/valueConstants';
+import HomeMainAuth from './HomeMainAuth';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Tabbar from './Tabbar';
+import {WhiteColor} from '../../../utility/colorConstants';
+import ProductIndex from '../../screens/main/products';
+import InventoryIndex from '../../screens/main/inventory';
+import OrderIndex from '../../screens/main/orders';
+import ProductMainAuth from './ProductMainAuth';
+import InventoryMainAuth from './InventoryMainAuth';
+import OrdersMainAuth from './OrdersMainAuth';
 
 const Stack = createBottomTabNavigator();
 function BottomStack() {
@@ -28,21 +29,22 @@ function BottomStack() {
         },
         unmountOnBlur: true,
       }}
-      tabBar={(props) => <Tabbar {...props} />}
-    >
+      tabBar={props => <Tabbar {...props} />}>
       <Stack.Screen name={HOME_SCREEN_MAIN_AUTH} component={HomeMainAuth} />
       <Stack.Screen
-        name={TRANSACTION_SCREEN_MAIN_AUTH}
-        component={TransactionMainStack}
-      />
-      <Stack.Screen name={SHOP_SCREEN_MAIN_AUTH} component={ShopMainStack} />
-      <Stack.Screen
-        name={DONATION_SCREEN_MAIN_AUTH}
-        component={DonationMainStack}
+        name={PRODUCT_SCREEN_MAIN_AUTH}
+        component={ProductMainAuth}
+        options={{}}
       />
       <Stack.Screen
-        name={PROFILE_SCREEN_MAIN_AUTH}
-        component={ProfileMainStack}
+        name={INVENTORY_SCREEN_MAIN_AUTH}
+        component={InventoryMainAuth}
+        options={{}}
+      />
+      <Stack.Screen
+        name={ORDERS_SCREEN_MAIN_AUTH}
+        component={OrdersMainAuth}
+        options={{}}
       />
     </Stack.Navigator>
   );

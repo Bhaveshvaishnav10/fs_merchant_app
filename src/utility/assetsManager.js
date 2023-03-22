@@ -1,0 +1,21 @@
+import TabOrderActivePng from '../../assets/png/order-active.png';
+import TabProductActivePng from '../../assets/png/product-active.png';
+import TabInventoryActivePng from '../../assets/png/inventory-active.png';
+import TabHomeActivePng from '../../assets/png/home-active.png';
+import TabOrderInActivePng from '../../assets/png/order-inactive.png';
+import TabProductInActivePng from '../../assets/png/product-inactive.png';
+import TabInventoryInActivePng from '../../assets/png/inventory-inactive.png';
+import TabHomeInActivePng from '../../assets/png/home-inactive.png';
+import ShopDummyPng from '../../assets/png/shopdummy.png';
+import ProductSearchPng from '../../assets/png/search.png';
+
+export const TabOrderActive = TabOrderActivePng;
+export const TabProductActive = TabProductActivePng;
+export const TabInventoryActive = TabInventoryActivePng;
+export const TabHomeActive = TabHomeActivePng;
+export const TabOrderInActive = TabOrderInActivePng;
+export const TabProductInActive = TabProductInActivePng;
+export const TabInventoryInActive = TabInventoryInActivePng;
+export const TabHomeInActive = TabHomeInActivePng;
+export const ProductSearchIcon = ProductSearchPng;
+export const ShopDummyIcon = ShopDummyPng;

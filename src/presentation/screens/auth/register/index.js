@@ -110,12 +110,12 @@ const RegisterAccount = () => {
     <View
       style={{
         width: '100%',
-        padding: 20,
+
         backgroundColor: '#FFFFFF',
         height: '100%',
       }}>
-      <ScrollView>
-        <View style={{marginTop: 20, flex: 1}}>
+      <ScrollView style={{padding: 20}}>
+        <View style={{marginTop: 20}}>
           <CustomText
             style={{
               color: BlackColor,
