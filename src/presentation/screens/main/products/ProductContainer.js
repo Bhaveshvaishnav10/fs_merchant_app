@@ -11,9 +11,7 @@ const ProductContainer = ({onPress}) => {
       style={{
         width: '100%',
         marginBottom: 20,
-        alignItems: 'center',
-        backgroundColor: 'red',
-        flexDirection: 'row',
+        // alignItems: 'center',
         padding: 10,
         borderRadius: 8,
         backgroundColor: WhiteColor,
@@ -27,25 +25,68 @@ const ProductContainer = ({onPress}) => {
         width: '100%',
       }}
       onPress={onPress}>
-      <Image
-        source={ShopDummyIcon}
-        style={{borderRadius: 8, width: 100, height: 100}}
-      />
+      <View
+        style={{
+          alignItems: 'center',
+          flexDirection: 'row',
+        }}>
+        <Image
+          source={ShopDummyIcon}
+          style={{borderRadius: 8, width: 60, height: 60}}
+        />
 
-      <View style={{marginLeft: 10}}>
-        <CustomText style={{fontFamily: 'Poppins-Medium', fontSize: 16}}>
-          Brand
-        </CustomText>
+        <View style={{marginLeft: 10}}>
+          <CustomText style={{fontFamily: 'Poppins-Medium', fontSize: 14}}>
+            Product Name
+          </CustomText>
 
-        <CustomText
-          style={{fontFamily: 'Poppins-Medium', fontSize: 16, marginTop: 5}}>
-          Product Description
-        </CustomText>
+          <CustomText
+            style={{fontFamily: 'Poppins-Regular', fontSize: 14, opacity: 0.6}}>
+            ₹ Price
+          </CustomText>
+        </View>
+      </View>
+      <View
+        style={{
+          borderColor: '#eaeaea',
+          borderTopWidth: 1,
+          marginVertical: 10,
+        }}></View>
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}>
+        <View>
+          <CustomText
+            style={{
+              fontFamily: 'Poppins-Medium',
+              fontSize: 14,
+            }}>
+            35pcs
+          </CustomText>
 
-        <CustomText
-          style={{fontFamily: 'Poppins-Medium', fontSize: 16, marginTop: 10}}>
-          ₹ Price
-        </CustomText>
+          <CustomText
+            style={{fontFamily: 'Poppins-Regular', fontSize: 12, opacity: 0.5}}>
+            In Stock
+          </CustomText>
+        </View>
+        <View>
+          <CustomText
+            style={{
+              fontFamily: 'Poppins-Medium',
+              fontSize: 14,
+              textAlign: 'right',
+            }}>
+            35pcs
+          </CustomText>
+
+          <CustomText
+            style={{fontFamily: 'Poppins-Regular', fontSize: 12, opacity: 0.5}}>
+            Total unit sold
+          </CustomText>
+        </View>
       </View>
     </Pressable>
   );

@@ -31,16 +31,38 @@ const InventoryContainer = ({onPress, count = 1}) => {
         },
         elevation: 4,
         width: '100%',
+        justifyContent: 'space-between',
       }}
       onPress={onPress}>
-      <Image
-        source={ShopDummyIcon}
-        style={{borderRadius: 8, width: 100, height: 100}}
-      />
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
+        }}>
+        <Image
+          source={ShopDummyIcon}
+          style={{borderRadius: 8, width: 60, height: 60}}
+        />
+
+        <View style={{marginLeft: 10}}>
+          <CustomText style={{fontFamily: 'Poppins-Medium', fontSize: 14}}>
+            Brand
+          </CustomText>
+
+          <CustomText
+            style={{
+              fontFamily: 'Poppins-Medium',
+              fontSize: 12,
+              color: '#6d7175',
+            }}>
+            Sku
+          </CustomText>
+        </View>
+      </View>
 
       <View style={{marginLeft: 10}}>
-        <CustomText style={{fontFamily: 'Poppins-Medium', fontSize: 16}}>
-          Brand
+        <CustomText style={{fontFamily: 'Poppins-Medium', fontSize: 14}}>
+          Quantity
         </CustomText>
 
         <CustomText
@@ -51,67 +73,21 @@ const InventoryContainer = ({onPress, count = 1}) => {
           }}>
           Sku
         </CustomText>
+      </View>
 
-        <View
+      <View style={{marginLeft: 10}}>
+        <CustomText style={{fontFamily: 'Poppins-Medium', fontSize: 14}}>
+          Product Id
+        </CustomText>
+
+        <CustomText
           style={{
-            flexDirection: 'row',
-            alignItems: 'center',
+            fontFamily: 'Poppins-Medium',
+            fontSize: 14,
+            color: '#6d7175',
           }}>
-          <Pressable
-            style={{
-              borderWidth: 1,
-              borderColor: '#6d7175',
-              width: 25,
-              height: 25,
-              borderRadius: 2,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-            onPress={() => {
-              setPcount(parseInt(pcount) - 1);
-            }}>
-            <Icon name="minus" color={'#6d7175'} size={18} />
-          </Pressable>
-
-          <CustomInput
-            onChange={text => {
-              setPcount(parseInt(text));
-            }}
-            value={pcount}
-            placeholder="Count"
-            maxLength={10}
-            style={{
-              borderWidth: 0.2,
-              borderColor: '#8c9196',
-              padding: 10,
-              height: 40,
-              width: 100,
-            }}
-            keyboardType={'numeric'}
-            containerStyle={{
-              height: 40,
-              marginHorizontal: 10,
-              width: 100,
-            }}
-            placeholderTextColor={'#6F6F6F'}
-          />
-
-          <Pressable
-            style={{
-              borderWidth: 1,
-              borderColor: '#6d7175',
-              width: 25,
-              height: 25,
-              borderRadius: 2,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-            onPress={() => {
-              setPcount(parseInt(pcount) + 1);
-            }}>
-            <Icon name="plus" color={'#6d7175'} size={18} />
-          </Pressable>
-        </View>
+          Sku
+        </CustomText>
       </View>
     </Pressable>
   );
@@ -120,3 +96,66 @@ const InventoryContainer = ({onPress, count = 1}) => {
 export default InventoryContainer;
 
 const styles = StyleSheet.create({});
+
+{
+  /* <View
+style={{
+  flexDirection: 'row',
+  alignItems: 'center',
+}}>
+<Pressable
+  style={{
+    borderWidth: 1,
+    borderColor: '#6d7175',
+    width: 25,
+    height: 25,
+    borderRadius: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+  }}
+  onPress={() => {
+    setPcount(parseInt(pcount) - 1);
+  }}>
+  <Icon name="minus" color={'#6d7175'} size={18} />
+</Pressable>
+
+<CustomInput
+  onChange={text => {
+    setPcount(parseInt(text));
+  }}
+  value={pcount}
+  placeholder="Count"
+  maxLength={10}
+  style={{
+    borderWidth: 0.2,
+    borderColor: '#8c9196',
+    padding: 10,
+    height: 40,
+    width: 100,
+  }}
+  keyboardType={'numeric'}
+  containerStyle={{
+    height: 40,
+    marginHorizontal: 10,
+    width: 100,
+  }}
+  placeholderTextColor={'#6F6F6F'}
+/>
+
+<Pressable
+  style={{
+    borderWidth: 1,
+    borderColor: '#6d7175',
+    width: 25,
+    height: 25,
+    borderRadius: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+  }}
+  onPress={() => {
+    setPcount(parseInt(pcount) + 1);
+  }}>
+  <Icon name="plus" color={'#6d7175'} size={18} />
+</Pressable>
+</View> */
+}

@@ -113,7 +113,7 @@ const Tabbar = ({state, navigation, preferences}) => {
                   ? 'Montserrat-SemiBold'
                   : 'Montserrat-Regular',
             }}>
-            Home
+            Overview
           </CustomText>
         </Pressable>
 

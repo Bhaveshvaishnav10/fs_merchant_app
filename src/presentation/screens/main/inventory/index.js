@@ -62,6 +62,8 @@ const InventoryIndex = () => {
           style={{flexGrow: 0}}
           contentContainerStyle={{
             marginTop: 20,
+            padding: 2,
+            paddingBottom: 50,
           }}
           data={productList}
           keyExtractor={item => item.key}
